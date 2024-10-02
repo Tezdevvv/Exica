@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+  <style>
+
+    .btn-slide {
+      background-color: aqua;
+    }
+
+  </style>
+
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/cy girl.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/cyb boy.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev btn-slide" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span> -->
+    </button>
+    <button class="carousel-control-next btn-slide" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span> -->
+    </button>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+var prevButton = document.querySelector('.carousel-control-prev');
+var nextButton = document.querySelector('.carousel-control-next');
+
+prevButton.addEventListener('click', function() {
+    var carousel = document.querySelector('#carouselExample');
+    var carouselInstance = new bootstrap.Carousel(carousel);
+    carouselInstance.prev();
+
+    console.log("kiri");
+});
+
+nextButton.addEventListener('click', function() {
+    var carousel = document.querySelector('#carouselExample');
+    var carouselInstance = new bootstrap.Carousel(carousel);
+    carouselInstance.next();
+
+    console.log("kanan");
+});
+  
+  </script>
+
+</body>
+</html>
